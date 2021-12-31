@@ -3,7 +3,7 @@ function getClock() {
     let date = new Date();
     let hari = date.getDay()
     let tanggal = date.getDate();
-    let bulan = date.getMonth();
+    let bulan = date.getMonth() + 1;
     let tahun = date.getFullYear();
     let hour = date.getHours();
     let minutes = date.getMinutes();
