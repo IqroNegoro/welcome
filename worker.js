@@ -2,6 +2,9 @@ let days = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jum'at", "Sabtu"]
 function getClock() {
     let date = new Date();
     let hari = date.getDay()
+    let tanggal = date.getDate();
+    let bulan = date.getMonth();
+    let tahun = date.getFullYear();
     let hour = date.getHours();
     let minutes = date.getMinutes();
     let second = date.getSeconds();
@@ -16,6 +19,9 @@ function getClock() {
     }
     postMessage({
         hari: days[hari],
+        tanggal: tanggal,
+        bulan: bulan,
+        tahun: tahun,
         jam: hour,
         menit: minutes,
         detik: second

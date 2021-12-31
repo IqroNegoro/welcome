@@ -23,7 +23,7 @@ worker.addEventListener("message", resp => {
         <span>${data.jam}:${data.menit}:${data.detik}</span>
     </div>
     <div class="hari">
-        <span>${data.hari}</span>
+        <span>${data.hari}, ${data.tanggal}:${data.bulan}:${data.tahun}</span>
     </div>
     `
 })
