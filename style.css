@@ -11,7 +11,7 @@ body {
 .container {
     width: 100%;
     min-height: 100vh;
-    background-image: url("malam.jpg");
+    background-image: url("https://wallpaperaccess.com/full/1687317.jpg"), url("malam.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -41,9 +41,7 @@ body {
 
 
 .nav .item {
-    font-size: 18px;
     transition: all 0.5s ease;
-    padding: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,9 +49,15 @@ body {
     cursor: pointer;
     text-align: center;
     position: relative;
+    transform: translateX(-100px);
+    transition: all 0.5s ease;
 }
 
-.nav .item:hover {
+.nav .item.active {
+    transform: translate(0,0)
+}
+
+.nav .item:hover, .nav .item .remove:hover {
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(2px);
 }
@@ -63,19 +67,28 @@ body {
     top: 0;
     right: 0;
     color: white;
-    padding: 6px;
+}
+
+.nav .item .remove i {
+    padding: 8px;
+    font-size: 20px;
 }
 
 .nav .item a {
     color: white;
     text-align: center;
     text-decoration: none;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav .item a .logo img {
-    width: 70%;
+    width: 100%;
     margin: 12px auto;
-    display: block;
     border-radius: 50%;
 }
 
