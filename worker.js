@@ -1,5 +1,5 @@
 let days = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jum'at", "Sabtu"]
-function getClock() {
+function getTime() {
     let date = new Date();
     let hari = date.getDay()
     let tanggal = date.getDate();
@@ -20,7 +20,7 @@ function getClock() {
     postMessage({
         hari: days[hari],
         tanggal: tanggal,
-        bulan: bulan,
+        bulan: bulan + 1,
         tahun: tahun,
         jam: hour,
         menit: minutes,
@@ -28,6 +28,6 @@ function getClock() {
     })
 }
 
-setInterval(getClock, 1000)
+setInterval(getTime, 1000)
 
 getClock();

@@ -53,6 +53,7 @@ function removing(target) {
     data.splice(index, 1);
     localStorage.setItem("nav", JSON.stringify(data))
     targeting.parentElement.parentElement.style.display = "none"
+    
 }
 
 container.addEventListener("click", e => {
